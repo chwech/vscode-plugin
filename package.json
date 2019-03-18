@@ -1,0 +1,54 @@
+{
+    "name": "wpcodeextension",
+    "displayName": "wpcodeextension",
+    "description": "weepl extension",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.31.0"
+    },
+    "categories": [
+        "Other",
+        "Snippets"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ],
+        "snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippet/javascript.json"
+            },
+            {
+                "language": "vue-html",
+				"path": "./snippet/vue-html.json"
+            },
+            {
+                "language": "vue",
+				"path": "./snippet/vue.json"
+            },
+            {
+                "language": "vue-html",
+				"path": "./snippet/weepal.code-snippets"
+            }
+		]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
